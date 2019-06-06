@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editText"
+
+
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="169dp"
+        android:layout_marginBottom="22dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+
+
+        app:layout_constraintBottom_toTopOf="@+id/sum_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/outputTextView" />
+
+    <Button
+        android:id="@+id/sum_button"
+
+
+        android:layout_width="43dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="14dp"
+        android:onClick="operandButtonAction_Summery"
+        android:text="+"
+        app:layout_constraintBottom_toTopOf="@+id/result_button"
+        app:layout_constraintEnd_toStartOf="@+id/subtraction_button"
+        app:layout_constraintHorizontal_bias="0.5"
+
+
+        app:layout_constraintStart_toStartOf="@id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+
+        />
+
+    <Button
+        android:id="@+id/subtraction_button"
+
+
+        android:layout_width="40dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginBottom="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/result_button"
+        app:layout_constraintEnd_toStartOf="@+id/multiplication_button"
+        app:layout_constraintStart_toEndOf="@+id/sum_button"
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+
+
+        android:text="-"
+        android:onClick="operandButtonAction_Subtraction"
+        />
+
+
+    <Button
+        android:id="@+id/multiplication_button"
+
+
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="363dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/segmentation_butoon"
+        app:layout_constraintStart_toEndOf="@+id/subtraction_button"
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+
+        android:text="*"
+        android:onClick="operandButtonAction_Multiplication"
+        />
+
+    <Button
+        android:id="@+id/segmentation_butoon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginBottom="363dp"
+        android:onClick="operandButtonAction_Segmentation"
+        android:text="/"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sqr_button"
+
+
+        app:layout_constraintStart_toEndOf="@+id/multiplication_button"
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/sqr_button"
+
+
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="245dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginRight="150dp"
+        android:layout_marginBottom="363dp"
+        android:onClick="sqrButtonAction"
+        android:text="sqr"
+        android:textSize="7dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toEndOf="@+id/segmentation_butoon"
+        app:layout_constraintTop_toBottomOf="@+id/outputTextView"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/result_button"
+
+
+        android:layout_width="75dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="305dp"
+        android:layout_marginRight="305dp"
+        android:onClick="resultButtonAction"
+        android:text=" = "
+        app:layout_constraintEnd_toEndOf="parent"
+
+
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sum_button" />
+
+    <TextView
+        android:id="@+id/outputTextView"
+
+
+        android:layout_width="326dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.298"
+        app:layout_constraintStart_toStartOf="parent"
+
+
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
